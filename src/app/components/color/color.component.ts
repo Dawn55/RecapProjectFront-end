@@ -8,7 +8,7 @@ import { ColorService } from 'src/app/services/color.service';
   styleUrls: ['./color.component.css']
 })
 export class ColorComponent implements OnInit {
-
+dataLoaded = false;
   colors:Color[]= [];
   constructor(private colorService:ColorService) { }
 
@@ -19,6 +19,7 @@ export class ColorComponent implements OnInit {
   getColor(){
     this.colorService.getColor().subscribe(response=>{
       this.colors = response.data
+      this.dataLoaded = true;
     })
   }
 }
