@@ -1,4 +1,4 @@
-<table class="table">
+<!-- <table class="table">
     <thead>
         <th>Id</th>
         <th>KullanıcıId</th>
@@ -9,4 +9,8 @@
         <td>{{customer.userId}}</td>
         <td>{{customer.companyName}}</td>
     </tr>
-</table>
+</table> -->
+<h5>Müşteriler</h5>
+<ul class="list-group">
+    <li *ngFor="let customer of customers" class="list-group-item">{{customer.companyName}}</li>
+  </ul>
