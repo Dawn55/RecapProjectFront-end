@@ -1,0 +1,24 @@
+
+    <div class="row">
+     <div *ngFor="let car of cars">
+        <img src="{{basePath}}{{car.imagePath}}" class="img-thumbnail" alt="...">
+        <table class="table">
+            <thead>
+                <tr>
+                  <td>Marka</td>
+                  <td>Araç</td>
+                  <td>Renk</td>
+                  <td>Açıklama</td>
+                  <td>Günlük Fiyat</td>
+                </tr>
+            </thead>
+          <tr>
+            <td>{{car.brandName}}</td>
+            <td>{{car.carName}}</td>
+            <td>{{car.colorName}}</td>
+            <td>{{car.description}}</td>
+            <td>{{car.dailyPrice}} ₺</td>
+          </tr>
+        </table>
+     </div>
+    </div>

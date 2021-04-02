@@ -13,4 +13,5 @@ apiUrl = "https://localhost:44372/api/brands/getall"
   getProduct():Observable<BrandResponseModel>{
    return this.httpClient.get<BrandResponseModel>(this.apiUrl);
   }
+  
 }

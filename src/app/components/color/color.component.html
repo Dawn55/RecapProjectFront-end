@@ -1,17 +1,7 @@
-<!-- <div *ngIf ="dataLoaded == false" class="spinner-border text-danger" role="status">
-    <span class="visually-hidden">Loading...</span>
-  </div>
-<table class="table">
-    <thead>
-        <th>Id</th>
-        <th>Renk</th>
-    </thead>
-    <tr *ngFor = "let color of colors">
- <td>{{color.id}}</td>
- <td>{{color.colorName}}</td>
-    </tr>
-</table> -->
+
 <h5>Renkler</h5>
 <ul class="list-group">
-    <li *ngFor="let color of colors" class="list-group-item">{{color.colorName}}</li>
+  <li [class]="getAllColorClass()" routerLink="/cars" >Tüm Araçlar</li>
+    <li (click)= "setCurrentColor(color)" [class] ="getColorClass(color)" routerLink="/cars/color/{{color.colorId}}"
+     *ngFor="let color of colors" class="list-group-item">{{color.colorName}}</li>
   </ul>
